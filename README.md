@@ -17,8 +17,29 @@ preserving the project's existing database and tools.
 
 ## Installation
 
-Keep the entire repository: references and SQL assets are part of the skill.
-The link commands below are for a new installation. Inspect any existing destination first.
+### Install with the Skills CLI
+
+With Node.js and npm available, install for Codex and Claude Code:
+
+```bash
+npx skills add amliuyong/analytics-engineering \
+  --skill analytics-engineering \
+  -g -a codex claude-code -y
+```
+
+`-g` installs at user scope; omit it to install in the current project.
+`-a` selects the agents, and `-y` skips confirmation prompts.
+The CLI installs the complete skill, including its references and SQL templates.
+The package name is `skills` (plural).
+
+Start a new session after installation so the tool can discover the skill.
+The entrypoint is [SKILL.md](SKILL.md).
+
+### Manual installation
+
+To work directly from a local clone, keep the entire repository: references and SQL assets
+are part of the skill. These commands are for a new installation; inspect any existing
+destination first.
 
 ```bash
 git clone https://github.com/amliuyong/analytics-engineering.git \
@@ -32,9 +53,6 @@ ln -s ~/my/analytics-engineering ~/.codex/skills/analytics-engineering
 mkdir -p ~/.claude/skills
 ln -s ~/my/analytics-engineering ~/.claude/skills/analytics-engineering
 ```
-
-Start a new session after installation so the tool can discover the skill.
-The entrypoint is [SKILL.md](SKILL.md).
 
 ## Example requests
 
