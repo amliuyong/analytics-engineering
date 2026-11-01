@@ -1,0 +1,4 @@
+interface:
+  display_name: "Analytics Engineering"
+  short_description: "Design analytical models, reliable metrics, and SQL"
+  default_prompt: "Use $analytics-engineering to design analytical models and metric definitions, generate target-dialect SQL, and define data quality checks."
